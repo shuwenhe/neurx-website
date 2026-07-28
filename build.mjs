@@ -1,4 +1,4 @@
-import { mkdir, copyFile, rm, writeFile } from "node:fs/promises";
+import { mkdir, copyFile, rm, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 const root = process.cwd();
@@ -7,55 +7,50 @@ const files = ["index.html", "styles.css", "main.js"];
 const hostingPath = path.join(root, ".openai", "hosting.json");
 const serverDir = path.join(outDir, "server");
 const openAiDir = path.join(outDir, ".openai");
-const serverEntry = `import http from "node:http";
-import { readFile } from "node:fs/promises";
-import { existsSync } from "node:fs";
-import path from "node:path";
-
-function resolveRootDir() {
-  const candidates = [process.cwd(), path.resolve(process.cwd(), ".."), path.resolve(process.cwd(), "../..")];
-  for (const candidate of candidates) {
-    if (existsSync(path.join(candidate, "index.html"))) {
-      return candidate;
-    }
-  }
-  return process.cwd();
-}
-
-const rootDir = resolveRootDir();
-const port = Number(process.env.PORT || 3000);
-
-const contentTypes = new Map([
-  [".html", "text/html; charset=utf-8"],
-  [".css", "text/css; charset=utf-8"],
-  [".js", "application/javascript; charset=utf-8"],
-  [".json", "application/json; charset=utf-8"],
+const [indexHtml, stylesCss, mainJs, hostingJson] = await Promise.all([
+  readFile(path.join(root, "index.html"), "utf8"),
+  readFile(path.join(root, "styles.css"), "utf8"),
+  readFile(path.join(root, "main.js"), "utf8"),
+  readFile(hostingPath, "utf8"),
+]);
+const serverEntry = `const assets = new Map([
+  ["/", ${JSON.stringify(indexHtml)}],
+  ["/index.html", ${JSON.stringify(indexHtml)}],
+  ["/styles.css", ${JSON.stringify(stylesCss)}],
+  ["/main.js", ${JSON.stringify(mainJs)}],
+  ["/.openai/hosting.json", ${JSON.stringify(hostingJson)}],
 ]);
 
-function resolveRequestUrl(url) {
-  const clean = new URL(url, "http://localhost").pathname;
-  return clean === "/" ? "/index.html" : clean;
-}
+const contentTypes = new Map([
+  ["/", "text/html; charset=utf-8"],
+  ["/index.html", "text/html; charset=utf-8"],
+  ["/styles.css", "text/css; charset=utf-8"],
+  ["/main.js", "application/javascript; charset=utf-8"],
+  ["/.openai/hosting.json", "application/json; charset=utf-8"],
+]);
 
-const server = http.createServer(async (req, res) => {
-  try {
-    const requestPath = resolveRequestUrl(req.url || "/");
-    const filePath = path.join(rootDir, requestPath);
-    const data = await readFile(filePath);
-    const ext = path.extname(filePath);
-    res.statusCode = 200;
-    res.setHeader("Content-Type", contentTypes.get(ext) || "application/octet-stream");
-    res.end(data);
-  } catch {
-    res.statusCode = 404;
-    res.setHeader("Content-Type", "text/plain; charset=utf-8");
-    res.end("Not Found");
-  }
-});
+export default {
+  async fetch(request) {
+    const pathname = new URL(request.url).pathname;
+    const key = assets.has(pathname) ? pathname : "/";
+    const body = assets.get(key);
 
-server.listen(port, () => {
-  console.log(\`NeurX static site listening on \${port}\`);
-});
+    if (body == null) {
+      return new Response("Not Found", {
+        status: 404,
+        headers: { "Content-Type": "text/plain; charset=utf-8" },
+      });
+    }
+
+    return new Response(body, {
+      status: 200,
+      headers: {
+        "Content-Type": contentTypes.get(key) || "application/octet-stream",
+        "Cache-Control": "public, max-age=300",
+      },
+    });
+  },
+};
 `;
 
 await rm(outDir, { recursive: true, force: true });
