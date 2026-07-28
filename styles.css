@@ -123,6 +123,14 @@ main,
   box-shadow: 0 10px 30px rgba(122, 167, 255, 0.28);
 }
 
+.brand-logo {
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 0.9rem;
+  object-fit: contain;
+  box-shadow: 0 10px 30px rgba(122, 167, 255, 0.28);
+}
+
 .brand-text {
   display: grid;
   gap: 0.1rem;
