@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>NeurX | S 语言与 Runtime-first AI 官网</title>
+    <title>NeurX | S 语言与商业计划书官网</title>
     <meta
       name="description"
-      content="NeurX 官方网站，介绍 S 语言、NeurX 项目架构，以及创始人何书文。"
+      content="NeurX 官方网站，整理展示 S 语言、NeurX 项目、商业计划书核心内容与创始人何书文。"
     />
     <meta name="theme-color" content="#0b1020" />
     <link rel="stylesheet" href="./styles.css" />
@@ -21,127 +21,262 @@
         <span class="brand-mark">N</span>
         <span class="brand-text">
           <strong>NeurX</strong>
-          <span>S 语言 / Runtime-first</span>
+          <span>S 语言 / 商业计划书官网</span>
         </span>
       </a>
 
       <nav class="nav">
-        <a href="#s-language">S 语言</a>
-        <a href="#neurx">NeurX</a>
+        <a href="#executive">摘要</a>
+        <a href="#market">市场</a>
+        <a href="#product">产品</a>
+        <a href="#strategy">战略</a>
         <a href="#founder">创始人</a>
-        <a href="#roadmap">路线图</a>
+        <a href="#finance">融资</a>
       </nav>
     </header>
 
     <main id="top">
       <section class="hero reveal">
         <div class="hero-copy">
-          <p class="eyebrow">Official Website / 官方站点</p>
-          <h1>让 S 语言成为 NeurX 的运行时底座。</h1>
+          <p class="eyebrow">Official Website / 商业计划书整理版</p>
+          <h1>NeurX: 下一代物理 AGI 与企业级 AI 生产力引擎。</h1>
           <p class="lead">
-            NeurX 不是只写一个模型，而是先定义接口契约、再落地 Runtime、最后把训练闭环打通。
-            S 语言承担的是“把系统想法变成可执行 IR”的角色，NeurX 承担的是“把训练和部署真正跑起来”的角色。
+            这是一份面向官网的信息整理版，覆盖《NeurX人工智能大模型项目商业计划书》的核心内容：
+            执行摘要、市场机遇、CodeAgent 产品体系、双底座战略、World Model 路线、团队与融资方案。
           </p>
 
           <div class="hero-actions">
-            <a class="button primary" href="#neurx">了解 NeurX</a>
-            <a class="button secondary" href="#founder">创始人介绍</a>
+            <a class="button primary" href="#executive">查看摘要</a>
+            <a class="button secondary" href="#finance">融资方案</a>
           </div>
 
           <div class="hero-metrics">
             <div>
-              <strong>Runtime-first</strong>
-              <span>先定契约，再落实现</span>
+              <strong>3,000 万美金</strong>
+              <span>本轮计划融资金额</span>
             </div>
             <div>
-              <strong>S IR</strong>
-              <span>编译到可运行中间表示</span>
+              <strong>5 家 POC</strong>
+              <span>头部标杆客户验证</span>
             </div>
             <div>
-              <strong>Closed Loop</strong>
-              <span>训练、保存、验证、迭代</span>
+              <strong>72% 毛利</strong>
+              <span>CodeAgent 私有化项目</span>
             </div>
           </div>
         </div>
 
         <div class="hero-panel">
           <div class="panel-card panel-glow">
-            <span class="panel-kicker">NeurX Stack</span>
+            <span class="panel-kicker">Plan Snapshot</span>
             <div class="stack">
-              <div class="stack-item">S 语言</div>
-              <div class="stack-item">Runtime Contracts</div>
-              <div class="stack-item active">Mini Trainer</div>
-              <div class="stack-item">LoRA / SFT</div>
-              <div class="stack-item">Inference / Serving</div>
+              <div class="stack-item">短期：CodeAgent 商业化闭环</div>
+              <div class="stack-item active">中期：NeurX-model 企业可信大模型</div>
+              <div class="stack-item">长期：NeurX-robot / World Model</div>
             </div>
           </div>
 
           <div class="panel-card quote-card">
-            <p>
-              “先把运行时打牢，再扩展到真实模型训练。”
-            </p>
+            <p>“构建‘决策大脑 + 执行躯干’双底座生态，先跑通现金流，再拉高技术壁垒。”</p>
           </div>
         </div>
       </section>
 
-      <section class="section reveal" id="s-language">
+      <section class="section reveal" id="executive">
         <div class="section-heading">
-          <p class="eyebrow">S Language</p>
-          <h2>为系统级 AI 训练而生的语言层。</h2>
-        </div>
-
-        <div class="cards three">
-          <article class="card">
-            <h3>IR 优先</h3>
-            <p>S 的核心目标不是“语法炫技”，而是把训练、调度、内存和执行逻辑稳定地表达成 IR。</p>
-          </article>
-          <article class="card">
-            <h3>契约清晰</h3>
-            <p>Tensor、Device、Dispatcher、Kernel、Autograd、Optimizer 分层明确，方便逐层实现与替换。</p>
-          </article>
-          <article class="card">
-            <h3>从小闭环开始</h3>
-            <p>先验证标量训练、再验证最小 LoRA、最后扩展到 Qwen 级别训练，避免一开始就被大模型细节拖死。</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section reveal" id="neurx">
-        <div class="section-heading">
-          <p class="eyebrow">NeurX Project</p>
-          <h2>一个以 Runtime 为中心的 AI 框架。</h2>
+          <p class="eyebrow">Executive Summary</p>
+          <h2>短期商业化闭环，长期物理 AGI 壁垒。</h2>
         </div>
 
         <div class="split">
           <div class="card accent">
-            <h3>项目目标</h3>
+            <h3>核心判断</h3>
             <p>
-              NeurX 试图把训练系统从“脚本拼装”提升到“契约驱动”的工程形态：
-              前端由 S 语言生成 IR，后端由 Runtime 执行，训练器、调度器和部署链路围绕同一套核心接口演进。
+              计划书将 NeurX 定位为“工程 Agent + 可信大模型 + 物理世界模型”三重架构，
+              用 CodeAgent 快速切入市场，先形成正向现金流，再以 S 语言和底层 Runtime 构筑长期壁垒。
             </p>
             <ul class="bullet-list">
-              <li>接口冻结优先于功能堆叠</li>
-              <li>先标量闭环，再扩展到 LoRA / SFT / Transformer</li>
-              <li>训练、验证、保存、部署共享同一套思路</li>
+              <li>短期以 CodeAgent 和 NeurX-model 进入政企与制造场景</li>
+              <li>中期以 S 语言统一预训练、微调、RAG、Agent 流程</li>
+              <li>长期卡位 World Model 与具身智能基础设施</li>
             </ul>
           </div>
 
-          <div class="diagram">
-            <div class="diagram-node">S 语言</div>
-            <div class="diagram-arrow">↓</div>
-            <div class="diagram-node">IR / Contracts</div>
-            <div class="diagram-arrow">↓</div>
-            <div class="diagram-node">Runtime</div>
-            <div class="diagram-arrow">↓</div>
-            <div class="diagram-node highlight">Trainer / Deploy</div>
+          <div class="cards">
+            <article class="card">
+              <h3>融资锚点</h3>
+              <p>3,000 万美金融资，拟出让 10% 股权，对应 3 亿美金投后估值。</p>
+            </article>
+            <article class="card">
+              <h3>商业验证</h3>
+              <p>已落地 5 家头部 POC 标杆客户，私有化项目客单价约 12 万美金/年。</p>
+            </article>
+            <article class="card">
+              <h3>盈利模型</h3>
+              <p>个人版、SaaS 版、私有化版三层变现，兼顾流量、现金流与高利润。</p>
+            </article>
           </div>
+        </div>
+      </section>
+
+      <section class="section reveal" id="market">
+        <div class="section-heading">
+          <p class="eyebrow">Market Opportunity</p>
+          <h2>企业级 AI 的结构性窗口正在打开。</h2>
+        </div>
+
+        <div class="cards three">
+          <article class="card">
+            <h3>2140 亿元</h3>
+            <p>企业级 AI 应用盘子规模巨大，短期 1-3 年仍处于千亿级蓝海扩张阶段。</p>
+          </article>
+          <article class="card">
+            <h3>2028 年 807 亿</h3>
+            <p>AI 编程工具市场在计划书中被视为高增速切口，CAGR 预计达到 110%。</p>
+          </article>
+          <article class="card">
+            <h3>1.2 万亿级蓝海</h3>
+            <p>长远目标不是单点工具，而是覆盖工业、研发与物理智能的产业生态底座。</p>
+          </article>
+        </div>
+
+        <div class="cards three" style="margin-top: 1rem">
+          <article class="card">
+            <h3>合规私有化稀缺</h3>
+            <p>国内规模以上工业企业中，仅少部分完成深度合规私有化部署，需求空白明显。</p>
+          </article>
+          <article class="card">
+            <h3>专业幻觉风险</h3>
+            <p>通用大模型在工业精密场景中的事实幻觉率高，难以满足生产与研发决策要求。</p>
+          </article>
+          <article class="card">
+            <h3>海外方案成本高</h3>
+            <p>传统海外闭源方案年综合使用及部署成本高，远超中小企业和机构预算承载力。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal" id="product">
+        <div class="section-heading">
+          <p class="eyebrow">Product System</p>
+          <h2>首发标杆：CodeAgent。</h2>
+        </div>
+
+        <div class="split">
+          <div class="card accent">
+            <h3>产品定位</h3>
+            <p>
+              CodeAgent 被定义为国内首款实现合规可控、信创全适配、全工程闭环的国产化编程工具，
+              面向政企研发流程、安全规范和复杂工程任务。
+            </p>
+            <ul class="bullet-list">
+              <li>全仓库解析与百万级代码上下文理解</li>
+              <li>自主终端操作、自动测试触发、日志抓取与环境监控</li>
+              <li>Git 流程自动化、冲突处理、PR 生成与版本回滚</li>
+              <li>基于错误日志的自动调试修复和验证</li>
+            </ul>
+          </div>
+
+          <div class="cards">
+            <article class="card">
+              <h3>信创适配</h3>
+              <p>深度兼容国产操作系统、数据库与芯片架构，形成底层到应用的全生态支持。</p>
+            </article>
+            <article class="card">
+              <h3>安全合规</h3>
+              <p>本地化存储、全程脱敏留痕，面向等保与涉密系统场景设计。</p>
+            </article>
+            <article class="card">
+              <h3>政企工具箱</h3>
+              <p>代码迁移辅助、自动化审计与风险扫描，适配复杂研发场景。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal" id="model">
+        <div class="section-heading">
+          <p class="eyebrow">Business Model</p>
+          <h2>三层变现结构，兼顾流量、现金流与利润。</h2>
+        </div>
+
+        <div class="cards three">
+          <article class="card">
+            <h3>个人云端版</h3>
+            <p>29 元/月起，作为流量入口和市场教育产品，毛利率约 90%。</p>
+          </article>
+          <article class="card">
+            <h3>中小企业 SaaS</h3>
+            <p>299 元/人/年，标准化订阅服务，毛利率约 82%，构成稳定基础现金流。</p>
+          </article>
+          <article class="card">
+            <h3>政企私有化离线版</h3>
+            <p>29-299 万授权，面向政府和大型企业，毛利率约 76%，是核心利润来源。</p>
+          </article>
+        </div>
+
+        <div class="split" style="margin-top: 1rem">
+          <div class="card">
+            <h3>三层闭环</h3>
+            <p>流量入口、稳定流水、高利润项目形成完整商业闭环，兼顾用户规模与盈利质量。</p>
+          </div>
+          <div class="card">
+            <h3>定价逻辑</h3>
+            <p>低门槛云端产品负责获客和教育市场，高客单私有化版本负责放大商业价值。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal" id="strategy">
+        <div class="section-heading">
+          <p class="eyebrow">Dual-Base Strategy</p>
+          <h2>商业基石和未来增长双轮驱动。</h2>
+        </div>
+
+        <div class="split">
+          <div class="card accent">
+            <h3>NeurX-model</h3>
+            <p>
+              企业级高可信通用大模型底座。S 语言覆盖预训练、微调、Code Agent、RAG、多智能体调度全流程。
+            </p>
+            <ul class="bullet-list">
+              <li>全栈一体化，减少多语言协作损耗</li>
+              <li>专属轻量化编译器，提升训练和推理效率</li>
+              <li>底层框架 + 专属编程语言形成双重技术壁垒</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>NeurX-robot</h3>
+            <p>World Model 物理世界模型底座，面向机器人、自动驾驶和工业元宇宙。</p>
+            <ul class="bullet-list">
+              <li>对齐 Genesis、JEPA、LiberAI 等前沿路线</li>
+              <li>从感知到认知，建立具身智能推理引擎</li>
+              <li>构建未来 3-5 年的长期增长想象空间</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cards three" style="margin-top: 1rem">
+          <article class="card">
+            <h3>企业私有化专属版</h3>
+            <p>安全隔离、深度定制、面向关键行业的高价值部署。</p>
+          </article>
+          <article class="card">
+            <h3>垂直深度解决方案版</h3>
+            <p>面向律所、制造、城投等行业的 Know-how Agent 组件库。</p>
+          </article>
+          <article class="card">
+            <h3>开源共建底座</h3>
+            <p>开放高性能模型调用和低代码工具链，形成开发者生态飞轮。</p>
+          </article>
         </div>
       </section>
 
       <section class="section reveal" id="founder">
         <div class="section-heading">
-          <p class="eyebrow">Founder</p>
-          <h2>创始人：何书文</h2>
+          <p class="eyebrow">Founder & Team</p>
+          <h2>创始人：何书文。</h2>
         </div>
 
         <div class="founder-grid">
@@ -150,7 +285,8 @@
             <div>
               <h3>北京大学背景</h3>
               <p>
-                何书文是 NeurX 与 S 语言的创始人，项目路线由他推动为“先运行时、后模型、再规模化”的工程策略。
+                何书文是 NeurX 与 S 语言的创始人。计划书中，他被定义为 AI 原生编程语言 S 的发明人，
+                并以“先商业化闭环、再长期壁垒”的路线推动项目落地。
               </p>
             </div>
           </div>
@@ -158,13 +294,70 @@
           <div class="founder-card bio">
             <h3>详细介绍</h3>
             <p>
-              何书文将系统语言、训练 Runtime、模型后训练和部署链路放在同一张架构图里审视。
-              在他的设计里，NeurX 不是单纯的训练脚本集合，而是一个从 S IR、设备抽象、Kernel 调度，到
-              mini trainer、LoRA 训练、验证与部署都可连续演进的统一系统。
+              按照商业计划书的团队介绍，何书文负责将大模型、工程 Agent、World Model 与底层语言体系整合为统一产品路线，
+              让 NeurX 不只是训练脚本，而是从代码执行、模型训练到行业落地的完整系统。
             </p>
             <p>
-              这条路线的核心是：先把接口契约定稳，再把最小训练闭环跑通，最后逐步扩展到更复杂的模型与硬件后端。
-              这也是 NeurX 选择“runtime-first”而不是“feature-first”的原因。
+              计划书中的角色定义还包括：创始人兼 CEO、NeurX 创始人、AI 原生编程语言 S 发明人，
+              并长期聚焦政企场景、工程自动化与底层 Runtime 能力建设。
+            </p>
+          </div>
+        </div>
+
+        <div class="cards three" style="margin-top: 1rem">
+          <article class="card">
+            <h3>王晓健</h3>
+            <p>首席技术科学家，聚焦 JEPA 隐空间表征与 Genesis Agent 路线。</p>
+          </article>
+          <article class="card">
+            <h3>雷成辉</h3>
+            <p>首席运营官，负责渠道、商务与行业集成资源网络。</p>
+          </article>
+          <article class="card">
+            <h3>智库与顾问</h3>
+            <p>覆盖国产算力、投研、具身智能、法律合规与美元资本等多个维度。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal" id="tech">
+        <div class="section-heading">
+          <p class="eyebrow">Core Barriers</p>
+          <h2>从 S 语言到 World Model 的代际技术壁垒。</h2>
+        </div>
+
+        <div class="cards three">
+          <article class="card">
+            <h3>S 语言底座</h3>
+            <p>从语法、内存调度到算子层面适配神经网络计算，减少通用语言冗余逻辑。</p>
+          </article>
+          <article class="card">
+            <h3>效率提升</h3>
+            <p>计划书宣称训练速度可提升 30% - 60%，显存占用降低 25% 以上。</p>
+          </article>
+          <article class="card">
+            <h3>推理优化</h3>
+            <p>底层编译优化可降低 NeurX-model 推理算力消耗约 18%，长期降低固定成本。</p>
+          </article>
+        </div>
+
+        <div class="split" style="margin-top: 1rem">
+          <div class="card">
+            <h3>JEPA + 因果推理</h3>
+            <p>
+              计划书提出在 World Model 方向布局 JEPA 隐空间预测、工业场景因果推断和具身智能工业专属基座。
+            </p>
+            <ul class="bullet-list">
+              <li>复杂物理场景泛化理解与预测精度提升</li>
+              <li>从相关性建模转向物理因果建模</li>
+              <li>以数字孪生打通认知到行动闭环</li>
+            </ul>
+          </div>
+          <div class="card accent">
+            <h3>NeurX 的差异化路径</h3>
+            <p>
+              不追求单点模型指标，而是构建“语言层 + Runtime + 行业应用 + 世界模型”的全链路能力，
+              目标是在企业级落地和未来物理 AGI 之间建立连续的产品演化路径。
             </p>
           </div>
         </div>
@@ -173,37 +366,78 @@
       <section class="section reveal" id="roadmap">
         <div class="section-heading">
           <p class="eyebrow">Roadmap</p>
-          <h2>从 Phase -1 到可用系统。</h2>
+          <h2>三年商业化路线图。</h2>
         </div>
 
         <div class="timeline">
           <article>
             <span>01</span>
-            <h3>冻结契约</h3>
-            <p>Tensor / Device / Kernel / Dispatcher / Autograd / Optimizer / Executor。</p>
+            <h3>第 1 年</h3>
+            <p>55 家签约标杆客户，实现 380 万美金营收，并完成产品标准化闭环。</p>
           </article>
           <article>
             <span>02</span>
-            <h3>最小训练闭环</h3>
-            <p>标量 forward、loss、backward、SGD，先确认 Runtime 的值语义。</p>
+            <h3>第 2 年</h3>
+            <p>160 家行业深度客户池，营收跃升至 1450 万美金，验证规模化复制能力。</p>
           </article>
           <article>
             <span>03</span>
-            <h3>最小 LoRA 版</h3>
-            <p>从 2x2 或 4x4 矩阵开始，验证真实梯度更新和保存逻辑。</p>
+            <h3>第 3 年</h3>
+            <p>320 家全领域标杆付费客户，营收突破 3600 万美金，进入爆发期。</p>
           </article>
           <article>
             <span>04</span>
-            <h3>完整模型链路</h3>
-            <p>扩展到 Qwen / Transformer 级别训练、验证和部署。</p>
+            <h3>第 5 年</h3>
+            <p>计划书给出的长周期目标为营收超过 1 亿美金，并推动资本市场路径。</p>
           </article>
+        </div>
+      </section>
+
+      <section class="section reveal" id="finance">
+        <div class="section-heading">
+          <p class="eyebrow">Funding Plan</p>
+          <h2>融资方案与资金投向。</h2>
+        </div>
+
+        <div class="cards three">
+          <article class="card">
+            <h3>融资金额</h3>
+            <p>3,000 万美金，支撑大模型和 World Model 的研发攻坚。</p>
+          </article>
+          <article class="card">
+            <h3>出让股权</h3>
+            <p>10% 股份，对应计划书中的投后估值 3 亿美金。</p>
+          </article>
+          <article class="card">
+            <h3>估值预期</h3>
+            <p>计划书预计 3 年可重估至 12-15 亿美金区间，5 年具备更高资本回报空间。</p>
+          </article>
+        </div>
+
+        <div class="split" style="margin-top: 1rem">
+          <div class="card">
+            <h3>资金分配</h3>
+            <ul class="bullet-list">
+              <li>核心技术研发攻坚 40%</li>
+              <li>底层算力基座锁定 30%</li>
+              <li>商业市场全域渗透 20%</li>
+              <li>组织人才长期保障 10%</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>投资亮点</h3>
+            <p>
+              商业落地强确定性闭环、双赛道成长价值、硬核技术代际优势、全明星团队和顶级智库，
+              是计划书中最核心的投资叙事。
+            </p>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <p>NeurX Official Website · S Language · Runtime-first AI Framework</p>
-      <p>Founder: He Shuwen · Peking University</p>
+      <p>NeurX Official Website · S Language · Business Plan Edition</p>
+      <p>Founder: 何书文 · 北京大学背景</p>
     </footer>
 
     <script src="./main.js"></script>
