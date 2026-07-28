@@ -3,7 +3,7 @@ import path from "node:path";
 
 const root = process.cwd();
 const outDir = path.join(root, "dist");
-const files = ["index.html", "styles.css", "main.js", "logo.jpg"];
+const files = ["index.html", "styles.css", "main.js", "logo.jpg", "shuwen.jpg"];
 const hostingPath = path.join(root, ".openai", "hosting.json");
 const serverDir = path.join(outDir, "server");
 const openAiDir = path.join(outDir, ".openai");
