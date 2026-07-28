@@ -251,6 +251,14 @@ h3 {
   font-size: 1.06rem;
 }
 
+.tagline {
+  margin: 0.65rem 0 0;
+  color: var(--accent);
+  font-size: 0.98rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
