@@ -259,6 +259,13 @@ h3 {
   text-transform: uppercase;
 }
 
+.secondary-tagline {
+  margin-top: 0.35rem;
+  color: var(--accent-2);
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
