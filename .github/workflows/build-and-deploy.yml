@@ -30,14 +30,14 @@ jobs:
       - name: Commit and push build files
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
         run: |
           git config --local user.email "1201220707@pku.edu.cn"
           git config --local user.name "shuwenhe"
           git add dist/
           if ! git diff-index --quiet HEAD --; then
             git commit -m "chore: auto-build dist files [skip ci]"
-            git push "https://${{ github.actor }}:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git" HEAD:main
+            git push "https://shuwenhe:${PERSONAL_TOKEN}@github.com/${{ github.repository }}.git" HEAD:main
           else
             echo "No changes in dist/ files"
           fi
