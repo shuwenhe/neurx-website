@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NeurX | S 语言与 Runtime-first AI 官网</title>
+    <meta
+      name="description"
+      content="NeurX 官方网站，介绍 S 语言、NeurX 项目架构，以及创始人何书文。"
+    />
+    <meta name="theme-color" content="#0b1020" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="backdrop backdrop-left"></div>
+    <div class="backdrop backdrop-right"></div>
+    <div class="grid-overlay"></div>
+
+    <header class="topbar">
+      <a class="brand" href="#top">
+        <span class="brand-mark">N</span>
+        <span class="brand-text">
+          <strong>NeurX</strong>
+          <span>S 语言 / Runtime-first</span>
+        </span>
+      </a>
+
+      <nav class="nav">
+        <a href="#s-language">S 语言</a>
+        <a href="#neurx">NeurX</a>
+        <a href="#founder">创始人</a>
+        <a href="#roadmap">路线图</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero reveal">
+        <div class="hero-copy">
+          <p class="eyebrow">Official Website / 官方站点</p>
+          <h1>让 S 语言成为 NeurX 的运行时底座。</h1>
+          <p class="lead">
+            NeurX 不是只写一个模型，而是先定义接口契约、再落地 Runtime、最后把训练闭环打通。
+            S 语言承担的是“把系统想法变成可执行 IR”的角色，NeurX 承担的是“把训练和部署真正跑起来”的角色。
+          </p>
+
+          <div class="hero-actions">
+            <a class="button primary" href="#neurx">了解 NeurX</a>
+            <a class="button secondary" href="#founder">创始人介绍</a>
+          </div>
+
+          <div class="hero-metrics">
+            <div>
+              <strong>Runtime-first</strong>
+              <span>先定契约，再落实现</span>
+            </div>
+            <div>
+              <strong>S IR</strong>
+              <span>编译到可运行中间表示</span>
+            </div>
+            <div>
+              <strong>Closed Loop</strong>
+              <span>训练、保存、验证、迭代</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-panel">
+          <div class="panel-card panel-glow">
+            <span class="panel-kicker">NeurX Stack</span>
+            <div class="stack">
+              <div class="stack-item">S 语言</div>
+              <div class="stack-item">Runtime Contracts</div>
+              <div class="stack-item active">Mini Trainer</div>
+              <div class="stack-item">LoRA / SFT</div>
+              <div class="stack-item">Inference / Serving</div>
+            </div>
+          </div>
+
+          <div class="panel-card quote-card">
+            <p>
+              “先把运行时打牢，再扩展到真实模型训练。”
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal" id="s-language">
+        <div class="section-heading">
+          <p class="eyebrow">S Language</p>
+          <h2>为系统级 AI 训练而生的语言层。</h2>
+        </div>
+
+        <div class="cards three">
+          <article class="card">
+            <h3>IR 优先</h3>
+            <p>S 的核心目标不是“语法炫技”，而是把训练、调度、内存和执行逻辑稳定地表达成 IR。</p>
+          </article>
+          <article class="card">
+            <h3>契约清晰</h3>
+            <p>Tensor、Device、Dispatcher、Kernel、Autograd、Optimizer 分层明确，方便逐层实现与替换。</p>
+          </article>
+          <article class="card">
+            <h3>从小闭环开始</h3>
+            <p>先验证标量训练、再验证最小 LoRA、最后扩展到 Qwen 级别训练，避免一开始就被大模型细节拖死。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal" id="neurx">
+        <div class="section-heading">
+          <p class="eyebrow">NeurX Project</p>
+          <h2>一个以 Runtime 为中心的 AI 框架。</h2>
+        </div>
+
+        <div class="split">
+          <div class="card accent">
+            <h3>项目目标</h3>
+            <p>
+              NeurX 试图把训练系统从“脚本拼装”提升到“契约驱动”的工程形态：
+              前端由 S 语言生成 IR，后端由 Runtime 执行，训练器、调度器和部署链路围绕同一套核心接口演进。
+            </p>
+            <ul class="bullet-list">
+              <li>接口冻结优先于功能堆叠</li>
+              <li>先标量闭环，再扩展到 LoRA / SFT / Transformer</li>
+              <li>训练、验证、保存、部署共享同一套思路</li>
+            </ul>
+          </div>
+
+          <div class="diagram">
+            <div class="diagram-node">S 语言</div>
+            <div class="diagram-arrow">↓</div>
+            <div class="diagram-node">IR / Contracts</div>
+            <div class="diagram-arrow">↓</div>
+            <div class="diagram-node">Runtime</div>
+            <div class="diagram-arrow">↓</div>
+            <div class="diagram-node highlight">Trainer / Deploy</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal" id="founder">
+        <div class="section-heading">
+          <p class="eyebrow">Founder</p>
+          <h2>创始人：何书文</h2>
+        </div>
+
+        <div class="founder-grid">
+          <div class="founder-card portrait">
+            <div class="portrait-badge">HSW</div>
+            <div>
+              <h3>北京大学背景</h3>
+              <p>
+                何书文是 NeurX 与 S 语言的创始人，项目路线由他推动为“先运行时、后模型、再规模化”的工程策略。
+              </p>
+            </div>
+          </div>
+
+          <div class="founder-card bio">
+            <h3>详细介绍</h3>
+            <p>
+              何书文将系统语言、训练 Runtime、模型后训练和部署链路放在同一张架构图里审视。
+              在他的设计里，NeurX 不是单纯的训练脚本集合，而是一个从 S IR、设备抽象、Kernel 调度，到
+              mini trainer、LoRA 训练、验证与部署都可连续演进的统一系统。
+            </p>
+            <p>
+              这条路线的核心是：先把接口契约定稳，再把最小训练闭环跑通，最后逐步扩展到更复杂的模型与硬件后端。
+              这也是 NeurX 选择“runtime-first”而不是“feature-first”的原因。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal" id="roadmap">
+        <div class="section-heading">
+          <p class="eyebrow">Roadmap</p>
+          <h2>从 Phase -1 到可用系统。</h2>
+        </div>
+
+        <div class="timeline">
+          <article>
+            <span>01</span>
+            <h3>冻结契约</h3>
+            <p>Tensor / Device / Kernel / Dispatcher / Autograd / Optimizer / Executor。</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>最小训练闭环</h3>
+            <p>标量 forward、loss、backward、SGD，先确认 Runtime 的值语义。</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>最小 LoRA 版</h3>
+            <p>从 2x2 或 4x4 矩阵开始，验证真实梯度更新和保存逻辑。</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>完整模型链路</h3>
+            <p>扩展到 Qwen / Transformer 级别训练、验证和部署。</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>NeurX Official Website · S Language · Runtime-first AI Framework</p>
+      <p>Founder: He Shuwen · Peking University</p>
+    </footer>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
