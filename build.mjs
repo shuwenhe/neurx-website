@@ -7,11 +7,22 @@ const files = ["index.html", "styles.css", "main.js"];
 const hostingPath = path.join(root, ".openai", "hosting.json");
 const serverDir = path.join(outDir, "server");
 const openAiDir = path.join(outDir, ".openai");
-const serverEntry = `const http = require("node:http");
-const { readFile } = require("node:fs/promises");
-const path = require("node:path");
+const serverEntry = `import http from "node:http";
+import { readFile } from "node:fs/promises";
+import { existsSync } from "node:fs";
+import path from "node:path";
 
-const rootDir = path.resolve(__dirname, "..");
+function resolveRootDir() {
+  const candidates = [process.cwd(), path.resolve(process.cwd(), ".."), path.resolve(process.cwd(), "../..")];
+  for (const candidate of candidates) {
+    if (existsSync(path.join(candidate, "index.html"))) {
+      return candidate;
+    }
+  }
+  return process.cwd();
+}
+
+const rootDir = resolveRootDir();
 const port = Number(process.env.PORT || 3000);
 
 const contentTypes = new Map([
