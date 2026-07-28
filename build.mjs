@@ -7,12 +7,10 @@ const files = ["index.html", "styles.css", "main.js"];
 const hostingPath = path.join(root, ".openai", "hosting.json");
 const serverDir = path.join(outDir, "server");
 const openAiDir = path.join(outDir, ".openai");
-const serverEntry = `import http from "node:http";
-import { readFile } from "node:fs/promises";
-import path from "node:path";
-import { fileURLToPath } from "node:url";
+const serverEntry = `const http = require("node:http");
+const { readFile } = require("node:fs/promises");
+const path = require("node:path");
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, "..");
 const port = Number(process.env.PORT || 3000);
 
