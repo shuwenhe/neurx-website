@@ -104,6 +104,67 @@
         </div>
       </section>
 
+        <section class="section reveal" id="modules">
+          <div class="section-heading">
+            <p class="eyebrow">Code Modules</p>
+            <h2>NeurX 代码模块概览</h2>
+          </div>
+
+          <div class="cards three">
+            <article class="card">
+              <h3>Runtime</h3>
+              <p>底层运行时与调度（内存/算子/设备绑定），负责模型执行效率与资源管理。</p>
+              <p style="margin-top:0.5rem;"><a href="https://github.com/shuwenhe/neurx/tree/main/runtime" target="_blank">查看 runtime 源码</a></p>
+            </article>
+            <article class="card">
+              <h3>Model</h3>
+              <p>模型定义与结构库，包含通用模型组件、模型注册与序列化支持。</p>
+              <p style="margin-top:0.5rem;"><a href="https://github.com/shuwenhe/neurx/tree/main/model" target="_blank">查看 model 源码</a></p>
+            </article>
+            <article class="card">
+              <h3>Trainer</h3>
+              <p>训练流水线与调度，包括训练循环、优化器挂载、检查点与评估模块。</p>
+              <p style="margin-top:0.5rem;"><a href="https://github.com/shuwenhe/neurx/tree/main/trainer" target="_blank">查看 trainer 源码</a></p>
+            </article>
+          </div>
+
+          <div class="cards three" style="margin-top:1rem;">
+            <article class="card">
+              <h3>Inference</h3>
+              <p>推理服务与高性能路径，支持低延迟部署与并发推理优化。</p>
+              <p style="margin-top:0.5rem;"><a href="https://github.com/shuwenhe/neurx/tree/main/inference" target="_blank">查看 inference 源码</a></p>
+            </article>
+            <article class="card">
+              <h3>Data & Dataset</h3>
+              <p>数据加载、预处理与数据集管理，支持分布式数据管线与缓存。</p>
+              <p style="margin-top:0.5rem;"><a href="https://github.com/shuwenhe/neurx/tree/main/data" target="_blank">查看 data 源码</a> · <a href="https://github.com/shuwenhe/neurx/tree/main/dataset" target="_blank">dataset</a></p>
+            </article>
+            <article class="card">
+              <h3>Tokenizer</h3>
+              <p>分词与编码组件，支持多种子词算法与自定义字典扩展。</p>
+              <p style="margin-top:0.5rem;"><a href="https://github.com/shuwenhe/neurx/tree/main/tokenizer" target="_blank">查看 tokenizer 源码</a></p>
+            </article>
+          </div>
+
+          <div class="cards three" style="margin-top:1rem;">
+            <article class="card">
+              <h3>Distributed</h3>
+              <p>分布式训练与通信层，包含参数同步、分片与并行策略实现。</p>
+              <p style="margin-top:0.5rem;"><a href="https://github.com/shuwenhe/neurx/tree/main/distributed" target="_blank">查看 distributed 源码</a></p>
+            </article>
+            <article class="card">
+              <h3>Serving</h3>
+              <p>模型服务、API 网关与部署工具链，面向私有化与云端部署场景。</p>
+              <p style="margin-top:0.5rem;"><a href="https://github.com/shuwenhe/neurx/tree/main/serving" target="_blank">查看 serving 源码</a></p>
+            </article>
+            <article class="card">
+              <h3>Web & Tools</h3>
+              <p>Web 工具、实验脚本与开发者工具集合，支持快速原型与可视化调试。</p>
+              <p style="margin-top:0.5rem;"><a href="https://github.com/shuwenhe/neurx/tree/main/web" target="_blank">查看 web 源码</a> · <a href="https://github.com/shuwenhe/neurx/tree/main/tools" target="_blank">tools</a></p>
+            </article>
+          </div>
+        </section>
+
       <section class="section reveal" id="executive">
         <div class="section-heading">
           <p class="eyebrow">Executive Summary</p>
@@ -371,7 +432,7 @@
           </article>
           <article class="card">
             <h3>效率提升</h3>
-            <p>计划书宣称训练速度可提升 30% - 60%，显存占用降低 25% 以上。</p>
+            <p>训练速度可提升 30% - 60%，显存占用降低 25% 以上。</p>
           </article>
           <article class="card">
             <h3>推理优化</h3>
@@ -383,7 +444,7 @@
           <div class="card">
             <h3>JEPA + 因果推理</h3>
             <p>
-              计划书提出在 World Model 方向布局 JEPA 隐空间预测、工业场景因果推断和具身智能工业专属基座。
+              在 World Model 方向布局 JEPA 隐空间预测、工业场景因果推断和具身智能工业专属基座。
             </p>
             <ul class="bullet-list">
               <li>复杂物理场景泛化理解与预测精度提升</li>
@@ -426,7 +487,7 @@
           <article>
             <span>04</span>
             <h3>第 5 年</h3>
-            <p>计划书给出的长周期目标为营收超过 1 亿美金，并推动资本市场路径。</p>
+            <p>长周期目标为营收超过 1 亿美金，并推动资本市场路径。</p>
           </article>
         </div>
       </section>
