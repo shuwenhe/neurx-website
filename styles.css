@@ -114,13 +114,13 @@ main,
 }
 
 .brand-icon {
-  width: 2.8rem;
-  height: 2.8rem;
+  width: 1.6rem;
+  height: 1.6rem;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 0.9rem;
+  border-radius: 0.5rem;
   background: linear-gradient(145deg, rgba(124, 227, 197, 0.92), rgba(122, 167, 255, 0.86));
   box-shadow: 0 10px 30px rgba(122, 167, 255, 0.28);
 }
@@ -139,10 +139,10 @@ main,
 }
 
 .brand-logo {
-  width: 2rem;
-  height: 2rem;
+  width: 1.1rem;
+  height: 1.1rem;
   object-fit: contain;
-  border-radius: 0.6rem;
+  border-radius: 0.3rem;
 }
 
 .brand-text {
@@ -637,13 +637,13 @@ h3 {
   }
 
   .brand-icon {
-    width: 2.45rem;
-    height: 2.45rem;
+    width: 2rem;
+    height: 2rem;
   }
 
   .brand-logo {
-    width: 1.7rem;
-    height: 1.7rem;
+    width: 1.35rem;
+    height: 1.35rem;
   }
 
   .brand-text strong {
