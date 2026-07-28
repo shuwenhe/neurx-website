@@ -32,6 +32,15 @@ deploy: build
 run: deploy
 	@echo "✓ All done! Changes live on both local and remote servers"
 
+local-deploy:
+	@echo "Building for local deploy..."
+	@npm run build
+	@echo "Starting local server on PORT=${PORT:-8000}..."
+	@./scripts/serve.sh ${PORT:-8000}
+
+local-stop:
+	@./scripts/stop-serve.sh
+
 push: build deploy
 
 clean:
