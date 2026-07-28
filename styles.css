@@ -601,6 +601,13 @@ h3 {
   font-size: 0.93rem;
 }
 
+.icp-record {
+  width: 100%;
+  margin: 0.25rem 0 0;
+  font-size: 0.86rem;
+  color: rgba(162, 175, 202, 0.9);
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(18px);
