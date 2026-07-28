@@ -3,6 +3,9 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
+  "author": "NeurX (何书文)",
+  "license": "PROPRIETARY",
+  "copyright": "Copyright © 2015-2026 NeurX. 书文智能 All Rights Reserved.",
   "scripts": {
     "build": "node build.mjs",
     "watch": "nodemon --exec 'npm run build' --watch index.html --watch styles.css --watch main.js --ext html,css,js"

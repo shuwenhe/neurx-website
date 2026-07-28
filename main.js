@@ -1,3 +1,5 @@
+// Copyright © 2015-2026 NeurX. 书文智能 All Rights Reserved.
+
 const items = document.querySelectorAll(".reveal");
 
 const observer = new IntersectionObserver(
