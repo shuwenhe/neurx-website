@@ -1,0 +1,14 @@
+[Unit]
+Description=NeurX Website (static)
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/app/shuwen/neurx-website
+ExecStart=/usr/bin/env bash /app/shuwen/neurx-website/scripts/serve.sh 8000
+ExecStop=/usr/bin/env bash /app/shuwen/neurx-website/scripts/stop-serve.sh
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
