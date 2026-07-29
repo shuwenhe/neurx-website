@@ -5,8 +5,13 @@ run:
 	@npm run build
 	@echo "✓ Build complete"
 	@echo ""
-	@echo "Starting local server on PORT=${PORT:-8000}..."
-	@./scripts/serve.sh ${PORT:-8000}
+	@echo "Installing systemd service..."
+	sudo ./scripts/install-systemd.sh
+	@echo "✓ Systemd service installed"
+	@echo ""
+	@echo "Restarting NeurX website service..."
+	sudo systemctl restart neurx-website
+	@echo "✓ Service restarted"
 
 # Watch mode - rebuild on file changes (requires nodemon)
 watch:

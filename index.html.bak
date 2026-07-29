@@ -41,7 +41,7 @@
         <a href="#base" data-en="Research Center" data-zh="研发中心">Research Center</a>
         <a href="#global" data-en="Global" data-zh="全球布局">Global</a>
         <a href="#finance" data-en="Funding" data-zh="融资">Funding</a>
-        <a href="https://github.com/shuwenhe/s" target="_blank" title="S Language GitHub" data-en="S Language" data-zh="S 语言">S Language</a>
+        <a href="https://github.com/shuwenhe/s" target="_blank" title="S Language GitHub" data-en="S0" data-zh="S 语言">S Language</a>
         <a href="https://github.com/shuwenhe/neurx" target="_blank" title="NeurX GitHub">NeurX</a>
         <button class="lang-toggle" id="langToggle" data-en="中文" data-zh="English" title="Toggle Language">中文</button>
       </nav>

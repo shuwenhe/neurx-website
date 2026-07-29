@@ -3,14 +3,15 @@ import path from "node:path";
 
 const root = process.cwd();
 const outDir = path.join(root, "dist");
-const files = ["index.html", "styles.css", "main.js", "logo.jpg", "shuwen.jpg"];
+const files = ["index.html", "styles.css", "main.js", "i18n.js", "logo.jpg", "shuwen.jpg"];
 const hostingPath = path.join(root, ".openai", "hosting.json");
 const serverDir = path.join(outDir, "server");
 const openAiDir = path.join(outDir, ".openai");
-const [indexHtml, stylesCss, mainJs, hostingJson] = await Promise.all([
+const [indexHtml, stylesCss, mainJs, i18nJs, hostingJson] = await Promise.all([
   readFile(path.join(root, "index.html"), "utf8"),
   readFile(path.join(root, "styles.css"), "utf8"),
   readFile(path.join(root, "main.js"), "utf8"),
+  readFile(path.join(root, "i18n.js"), "utf8"),
   readFile(hostingPath, "utf8"),
 ]);
 const serverEntry = `const assets = new Map([
@@ -18,6 +19,7 @@ const serverEntry = `const assets = new Map([
   ["/index.html", ${JSON.stringify(indexHtml)}],
   ["/styles.css", ${JSON.stringify(stylesCss)}],
   ["/main.js", ${JSON.stringify(mainJs)}],
+  ["/i18n.js", ${JSON.stringify(i18nJs)}],
   ["/.openai/hosting.json", ${JSON.stringify(hostingJson)}],
 ]);
 
@@ -26,6 +28,7 @@ const contentTypes = new Map([
   ["/index.html", "text/html; charset=utf-8"],
   ["/styles.css", "text/css; charset=utf-8"],
   ["/main.js", "application/javascript; charset=utf-8"],
+  ["/i18n.js", "application/javascript; charset=utf-8"],
   ["/.openai/hosting.json", "application/json; charset=utf-8"],
 ]);
 
