@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeurX Language Toggle Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #0f1419;
+            color: #e0e0e0;
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 15px;
+            background: #1a1f2e;
+            border-radius: 8px;
+        }
+        button {
+            background: #7aa7ff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin: 5px;
+        }
+        button:hover {
+            background: #5a87ff;
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            background: #2a3f5f;
+            border-left: 4px solid #7aa7ff;
+            border-radius: 4px;
+        }
+        .success { color: #00ff88; }
+        .error { color: #ff6b6b; }
+        .info { color: #87ceeb; }
+    </style>
+</head>
+<body>
+    <h1>🧪 NeurX Language Toggle Test</h1>
+    
+    <div class="test-section">
+        <h2>Test 1: Check LocalStorage</h2>
+        <button onclick="testLocalStorage()">Test localStorage</button>
+        <div id="test1-result" class="status"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>Test 2: Check Language Button</h2>
+        <button onclick="testLanguageButton()">Check lang-toggle button</button>
+        <div id="test2-result" class="status"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>Test 3: Load Main Page & Test Toggle</h2>
+        <button onclick="testMainPage()">Test main page language toggle</button>
+        <div id="test3-result" class="status"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>Test 4: Simulate Language Switch</h2>
+        <button onclick="simulateLanguageSwitch()">Simulate language switch</button>
+        <div id="test4-result" class="status"></div>
+    </div>
+
+    <script>
+        function testLocalStorage() {
+            const result = document.getElementById('test1-result');
+            try {
+                localStorage.setItem('test', 'value');
+                const value = localStorage.getItem('test');
+                localStorage.removeItem('test');
+                
+                if (value === 'value') {
+                    result.innerHTML = '<span class="success">✓ localStorage is working properly</span>';
+                } else {
+                    result.innerHTML = '<span class="error">✗ localStorage test failed</span>';
+                }
+            } catch (e) {
+                result.innerHTML = '<span class="error">✗ Error: ' + e.message + '</span>';
+            }
+        }
+
+        function testLanguageButton() {
+            const result = document.getElementById('test2-result');
+            try {
+                const button = document.querySelector('.lang-toggle');
+                if (!button) {
+                    result.innerHTML = '<span class="error">✗ lang-toggle button not found on this page</span>';
+                    result.innerHTML += '<br><span class="info">Note: This test page doesn\'t have the button. Check index.html instead.</span>';
+                } else {
+                    result.innerHTML = '<span class="success">✓ lang-toggle button found</span>';
+                    result.innerHTML += '<br>Button text: ' + button.textContent;
+                    result.innerHTML += '<br>data-en: ' + button.getAttribute('data-en');
+                    result.innerHTML += '<br>data-zh: ' + button.getAttribute('data-zh');
+                }
+            } catch (e) {
+                result.innerHTML = '<span class="error">✗ Error: ' + e.message + '</span>';
+            }
+        }
+
+        function testMainPage() {
+            const result = document.getElementById('test3-result');
+            result.innerHTML = '<span class="info">Loading main page in iframe...</span>';
+            
+            // Create an iframe to test main page
+            const iframe = document.createElement('iframe');
+            iframe.src = './index.html';
+            iframe.style.display = 'none';
+            
+            iframe.onload = function() {
+                try {
+                    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                    const button = iframeDoc.querySelector('.lang-toggle');
+                    
+                    if (button) {
+                        result.innerHTML = '<span class="success">✓ Main page has lang-toggle button</span>';
+                        result.innerHTML += '<br>Button ID: ' + button.id;
+                        result.innerHTML += '<br>Initial text: ' + button.textContent;
+                        
+                        // Check for data-en/data-zh attributes
+                        const navLinks = iframeDoc.querySelectorAll('[data-en][data-zh]');
+                        result.innerHTML += '<br><span class="success">✓ Found ' + navLinks.length + ' elements with translations</span>';
+                    } else {
+                        result.innerHTML = '<span class="error">✗ Button not found in main page</span>';
+                    }
+                } catch (e) {
+                    result.innerHTML = '<span class="error">✗ Error: ' + e.message + '</span>';
+                }
+                document.body.removeChild(iframe);
+            };
+            
+            iframe.onerror = function() {
+                result.innerHTML = '<span class="error">✗ Failed to load iframe</span>';
+            };
+            
+            document.body.appendChild(iframe);
+        }
+
+        function simulateLanguageSwitch() {
+            const result = document.getElementById('test4-result');
+            try {
+                // Simulate the updatePageLanguage function
+                function updatePageLanguage(lang) {
+                    localStorage.setItem('language', lang);
+                    
+                    const elements = document.querySelectorAll('[data-en][data-zh]');
+                    elements.forEach(el => {
+                        if (lang === 'zh') {
+                            el.textContent = el.getAttribute('data-zh');
+                        } else {
+                            el.textContent = el.getAttribute('data-en');
+                        }
+                    });
+                    
+                    if (lang === 'zh') {
+                        document.title = 'NeurX | S 语言 官网';
+                        document.documentElement.lang = 'zh-CN';
+                    } else {
+                        document.title = 'NeurX | S Language Official Website';
+                        document.documentElement.lang = 'en';
+                    }
+                    
+                    return lang;
+                }
+                
+                // Test the function
+                const lang1 = updatePageLanguage('en');
+                const lang2 = updatePageLanguage('zh');
+                const savedLang = localStorage.getItem('language');
+                
+                result.innerHTML = '<span class="success">✓ Language switch simulation successful</span>';
+                result.innerHTML += '<br>Switched to: ' + lang2;
+                result.innerHTML += '<br>Saved in localStorage: ' + savedLang;
+                result.innerHTML += '<br>Current title: ' + document.title;
+                
+            } catch (e) {
+                result.innerHTML = '<span class="error">✗ Error: ' + e.message + '</span>';
+            }
+        }
+    </script>
+</body>
+</html>
