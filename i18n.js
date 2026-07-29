@@ -26,7 +26,7 @@ const i18nDict = {
     zh: '创始人'
   },
   'nav-research': {
-    en: 'Research Center',
+    en: 'Research',
     zh: '研发中心'
   },
   'nav-global': {
@@ -38,7 +38,7 @@ const i18nDict = {
     zh: '融资'
   },
   's-language': {
-    en: 'S Language',
+    en: 'S',
     zh: 'S 语言'
   },
   'lang-toggle': {
