@@ -1,241 +1,220 @@
-# NeurX 官方网站
+# NeurX Official Website
 
-**NeurX: 下一代物理 AGI 与企业级 AI 生产力引擎**
+**NeurX: The next-generation physical AGI and enterprise AI productivity engine**
 
 [![GitHub](https://img.shields.io/badge/GitHub-S%20Language-blue)](https://github.com/shuwenhe/s)
 [![GitHub](https://img.shields.io/badge/GitHub-NeurX-blue)](https://github.com/shuwenhe/neurx)
 [![License](https://img.shields.io/badge/License-MIT-green)]()
 [![Website](https://img.shields.io/badge/Website-xstiku.com-brightgreen)](https://xstiku.com)
 
-## 📋 项目概述
+## Project Overview
 
-NeurX 是一个以"工程 Agent + 可信大模型 + 物理世界模型"为核心的三重架构系统，由北京大学背景的创始人何书文领导，致力于打造世界领先的人工智能技术企业。
+NeurX is a three-layer architecture system centered on "engineering agents + trusted large models + physical world models." Led by founder He Shuwen, who has a Peking University background, it is committed to building a world-leading artificial intelligence technology company.
 
-### 🎯 核心使命
-- **短期**：CodeAgent 商业化闭环，快速切入政企与制造场景
-- **中期**：NeurX-model 企业可信大模型，以 S 语言统一全流程
-- **长期**：World Model + 具身智能基础设施
+### Core Mission
+- **Short term**: Commercialize CodeAgent and quickly enter government, enterprise, and manufacturing scenarios
+- **Mid term**: Launch the NeurX-model enterprise trusted large model, unifying the full workflow with S Language
+- **Long term**: Build a world model and embodied intelligence infrastructure
 
-### 💡 核心理念
-> "构建'决策大脑 + 执行躯干'双底座生态，先跑通现金流，再拉高技术壁垒。"
+### Core Philosophy
+> "Build a dual-base ecosystem of 'decision brain + execution body,' first establish cash flow, then raise the technical moat."
 
 ---
 
-## 📊 项目指标
+## Project Metrics
 
-| 指标 | 数值 |
+| Metric | Value |
 |------|------|
-| **融资金额** | 3,000 万美金 |
-| **股权释放** | 10% |
-| **投后估值** | 3 亿美金 |
-| **客户案例** | 5 家头部 POC 标杆客户 |
-| **私有化客单价** | 约 12 万美金/年 |
-| **CodeAgent 毛利率** | 72% |
+| **Financing Amount** | USD 30 million |
+| **Equity Released** | 10% |
+| **Post-money Valuation** | USD 300 million |
+| **Customer Cases** | 5 top-tier POC benchmark customers |
+| **Private Deployment ARR** | About USD 120,000/year |
+| **CodeAgent Gross Margin** | 72% |
 
 ---
 
-## 🚀 产品体系
+## Product System
 
-### CodeAgent - 国产化编程工具
-首发标杆产品，实现合规可控、信创全适配、全工程闭环的编程工具。
+### CodeAgent - Domestic Programming Tool
+The flagship launch product, delivering a compliant, controllable, fully localized, end-to-end programming tool.
 
-**核心能力：**
-- 全仓库解析与百万级代码上下文理解
-- 自主终端操作、自动测试触发、日志抓取与环境监控
-- Git 流程自动化、冲突处理、PR 生成与版本回滚
-- 基于错误日志的自动调试修复和验证
+**Core Capabilities:**
+- Full-repository parsing and million-scale code context understanding
+- Autonomous terminal operations, automatic test triggering, log capture, and environment monitoring
+- Git workflow automation, conflict handling, PR generation, and version rollback
+- Automatic debugging, fixes, and verification based on error logs
 
-**适配特性：**
-- 信创全适配：国产操作系统、数据库与芯片架构
-- 安全合规：本地化存储、全程脱敏留痕，面向等保与涉密系统
-- 政企工具箱：代码迁移、自动化审计、风险扫描
+**Compatibility Features:**
+- Full localization support: domestic operating systems, databases, and chip architectures
+- Security and compliance: localized storage, full anonymization and audit trails, designed for classified and regulated systems
+- Government and enterprise toolkit: code migration, automated auditing, and risk scanning
 
-### NeurX-model - 企业级可信大模型
-- S 语言覆盖预训练、微调、Code Agent、RAG、多智能体调度全流程
-- 全栈一体化，减少多语言协作损耗
-- 专属轻量化编译器，提升训练和推理效率
-- 底层框架 + 专属编程语言形成双重技术壁垒
+### NeurX-model - Enterprise Trusted Large Model
+- S Language covers the full workflow for pretraining, fine-tuning, Code Agent, RAG, and multi-agent orchestration
+- Full-stack integration reduces collaboration overhead across multiple languages
+- Dedicated lightweight compiler improves training and inference efficiency
+- The combination of the underlying framework and a dedicated programming language creates a dual technical moat
 
-### NeurX-robot - World Model 物理世界模型
-- 对齐 Genesis、JEPA、LiberAI 等前沿路线
-- 从感知到认知，建立具身智能推理引擎
-- 构建未来 3-5 年的长期增长想象空间
+### NeurX-robot - World Model Physical World Model
+- Aligned with cutting-edge approaches such as Genesis, JEPA, and LiberAI
+- Builds an embodied intelligence reasoning engine from perception to cognition
+- Creates long-term growth potential for the next 3-5 years
 
 ---
 
-## 💼 商业模式
+## Business Model
 
-### 三层变现结构
+### Three-Tier Monetization Structure
 
-| 产品层级 | 价格 | 毛利率 | 定位 |
+| Product Tier | Price | Gross Margin | Positioning |
 |---------|------|--------|------|
-| **个人云端版** | 29 元/月起 | 90% | 流量入口与市场教育 |
-| **中小企业 SaaS** | 299 元/人/年 | 82% | 稳定基础现金流 |
-| **政企私有化离线版** | 29-299 万授权 | 76% | 核心利润来源 |
+| **Individual Cloud Edition** | Starting at RMB 29/month | 90% | Traffic entry point and market education |
+| **SMB SaaS** | RMB 299/user/year | 82% | Stable base cash flow |
+| **Government and Enterprise Private Offline Edition** | RMB 290,000-2.99 million license | 76% | Core profit source |
 
-**商业闭环：** 低门槛云端产品负责获客教育 → 稳定 SaaS 流水 → 高客单私有化版本放大价值
-
----
-
-## 📈 市场机遇
-
-- **2,140 亿元** - 企业级 AI 应用盘子规模（1-3年蓝海扩张阶段）
-- **2028年 807 亿** - AI 编程工具市场（CAGR 110%）
-- **1.2 万亿级蓝海** - 覆盖工业、研发与物理智能的产业生态底座
-
-### 市场痛点
-- **合规私有化稀缺** - 国内仅少部分工业企业完成深度合规私有化
-- **专业幻觉风险** - 通用大模型在工业精密场景中事实幻觉率高
-- **海外方案成本高** - 闭源方案年综合成本远超中小企业预算
+**Commercial Flywheel:** low-barrier cloud products handle acquisition and education -> stable SaaS recurring revenue -> high-ACV private deployment editions amplify value
 
 ---
 
-## 🏢 团队与基地
+## Market Opportunity
 
-### 研发中心
-- **地点**：北京中关村核心区域
-- **优势**：毗邻清华大学、北京大学，汇聚国内顶尖创新资源
+- **RMB 214 billion** - enterprise AI application market size (blue-ocean expansion phase over 1-3 years)
+- **RMB 80.7 billion by 2028** - AI programming tool market (CAGR 110%)
+- **RMB 1.2 trillion blue ocean** - industrial, R&D, and physical intelligence ecosystem foundation
 
-### 核心团队
-- **教育背景**：清华大学、北京大学毕业生
-- **行业经验**：来自字节跳动、腾讯、阿里巴巴、百度、京东等领先科技企业
-- **专长领域**：大模型、工程自动化、底层 Runtime、具身智能
-
-### 创始人团队
-- **何书文** - 创始人兼 CEO、北京大学背景、AI 原生编程语言 S 发明人
-- **张晓鸣** - 首席技术科学家、JEPA 隐空间表征与 Genesis Agent 研究
-- **雷成辉** - 首席运营官、渠道商务与行业集成资源
-- **智库顾问** - 覆盖国产算力、投研、具身智能、法律合规等维度
+### Market Pain Points
+- **Compliance-ready private deployment is scarce** - only a small share of domestic industrial enterprises have completed deep compliant private deployment
+- **Professional hallucination risk** - general-purpose large models still have high factual hallucination rates in precision industrial scenarios
+- **High cost of overseas solutions** - closed-source solutions are far beyond the annual budget of SMBs
 
 ---
 
-## 🌍 全球化发展战略
+## Team and Base
 
-### 愿景
-自创业第一天起，坚持全球化发展战略，打造世界领先的人工智能技术企业。
-- 以北京为全球研发中心
-- 立足中国、面向全球
+### R&D Center
+- **Location**: Core area of Zhongguancun, Beijing
+- **Advantages**: Close to Tsinghua University and Peking University, with access to top domestic innovation resources
 
-### 全国布局
-- 持续推进全国重点城市研发与业务布局
-- 逐步在各省会城市设立分支机构
-- 构建覆盖全国、辐射全球的研发与服务网络
+### Core Team
+- **Education background**: Graduates from Tsinghua University and Peking University
+- **Industry experience**: Backgrounds from ByteDance, Tencent, Alibaba, Baidu, JD.com, and other leading technology companies
+- **Expertise**: Large models, engineering automation, runtime systems, and embodied intelligence
+
+### Founding Team
+- **He Shuwen** - Founder and CEO, Peking University background, inventor of the AI-native programming language S
+- **Zhang Xiaoming** - Chief Scientific Officer, research in JEPA latent representation and Genesis Agent
+- **Lei Chenghui** - Chief Operating Officer, channel business and industry integration resources
+- **Advisory Board** - Covers domestic compute, investment research, embodied intelligence, legal compliance, and more
 
 ---
 
-## 📊 三年商业化路线图
+## Global Expansion Strategy
 
-| 阶段 | 目标 | 营收 |
+### Vision
+From day one, maintain a global expansion strategy and build a world-leading artificial intelligence technology company.
+- Use Beijing as the global R&D center
+- Rooted in China, serving the world
+
+### National Footprint
+- Continue advancing R&D and business presence in key cities across China
+- Gradually establish branches in provincial capitals
+- Build a nationwide network for R&D and services with global reach
+
+---
+
+## Three-Year Commercialization Roadmap
+
+| Phase | Goal | Revenue |
 |------|------|------|
-| **第 1 年** | 55 家签约标杆客户，产品标准化闭环 | 380 万美金 |
-| **第 2 年** | 160 家行业深度客户池，规模化复制 | 1,450 万美金 |
-| **第 3 年** | 320 家全领域标杆付费客户，进入爆发期 | 3,600 万美金 |
-| **第 5 年** | 长周期目标，推动资本市场路径 | 超 1 亿美金 |
+| **Year 1** | 55 signed benchmark customers, standardized product closed loop | USD 3.8 million |
+| **Year 2** | 160 deep industry customers, scalable replication | USD 14.5 million |
+| **Year 3** | 320 benchmark paying customers across all fields, entering an acceleration phase | USD 36 million |
+| **Year 5** | Long-term target, advancing the capital market path | Over USD 100 million |
 
 ---
 
-## 💰 融资信息
+## Funding Information
 
-### 融资方案
-- **融资金额**：3,000 万美金
-- **出让股权**：10%
-- **投后估值**：3 亿美金
-- **3年重估目标**：12-15 亿美金
-- **5年回报空间**：更高资本回报潜力
+### Financing Plan
+- **Funding Amount**: USD 30 million
+- **Equity Offered**: 10%
+- **Post-money Valuation**: USD 300 million
+- **3-Year Revaluation Target**: USD 1.2-1.5 billion
+- **5-Year Return Potential**: Higher capital return potential
 
-### 资金分配
-- **核心技术研发** - 40%
-- **底层算力基座** - 30%
-- **商业市场渗透** - 20%
-- **组织人才保障** - 10%
+### Use of Funds
+- **Core Technology R&D** - 40%
+- **Underlying Compute Foundation** - 30%
+- **Commercial Market Expansion** - 20%
+- **Organization and Talent Support** - 10%
 
-### 投资亮点
-✨ 商业落地强确定性闭环  
-✨ 双赛道成长价值（短期现金流 + 长期壁垒）  
-✨ 硬核技术代际优势（S 语言 + World Model）  
-✨ 全明星团队与顶级智库  
-
----
-
-## 🛠️ 核心技术壁垒
-
-### S 语言底座
-- 从语法、内存调度到算子层面适配神经网络计算
-- 减少通用语言冗余逻辑
-
-### 性能提升
-- **训练速度提升** 30% - 60%
-- **显存占用降低** 25% 以上
-- **推理算力消耗降低** 约 18%
-
-### JEPA + 因果推理
-- 复杂物理场景泛化理解与预测精度提升
-- 从相关性建模转向物理因果建模
-- 数字孪生打通认知到行动闭环
-
-### NeurX 差异化路径
-不追求单点模型指标，构建"语言层 + Runtime + 行业应用 + 世界模型"全链路能力，在企业级落地和未来物理 AGI 间建立连续演化路径。
+### Investment Highlights
+✨ Strong certainty in commercial execution  
+✨ Dual-track growth value (short-term cash flow + long-term moat)  
+✨ Generational technical advantage (S Language + World Model)  
+✨ All-star team and top-tier advisors  
 
 ---
 
-## 🔗 相关链接
+## Core Technical Moat
 
-- **官方网站** - https://xstiku.com
-- **S 语言 GitHub** - https://github.com/shuwenhe/s
+### S Language Foundation
+- Adapts at the syntax, memory scheduling, and operator levels for neural network computation
+- Reduces redundant logic common in general-purpose languages
+
+### Performance Improvements
+- **Training speed increase**: 30% - 60%
+- **VRAM usage reduction**: More than 25%
+- **Inference compute reduction**: About 18%
+
+### JEPA + Causal Reasoning
+- Improves generalization and prediction accuracy in complex physical scenarios
+- Shifts from correlation modeling to physical causal modeling
+- Connects cognition to action through digital twin workflows
+
+### NeurX Differentiation Path
+Rather than chasing a single model benchmark, NeurX is building an end-to-end capability across the language layer, runtime, industry applications, and world models, creating a continuous evolution path between enterprise deployment and future physical AGI.
+
+---
+
+## Related Links
+
+- **Official Website** - https://xstiku.com
+- **S Language GitHub** - https://github.com/shuwenhe/s
 - **NeurX GitHub** - https://github.com/shuwenhe/neurx
-- **创始人** - 何书文（北京大学）
+- **Founder** - He Shuwen (Peking University)
 
 ---
 
-## 📜 合规信息
+## Compliance Information
 
-**ICP 备案号**：京ICP备15025412号
+**ICP Filing Number**: 京ICP备15025412号
 
 ---
 
-## 📝 网站信息
+## Website Information
 
-- **版本** - v2.9
-- **技术栈** - HTML5, CSS3, Vanilla JavaScript
-- **部署** - nginx
-- **域名** - xstiku.com, www.xstiku.com
+- **Version** - v2.9
+- **Tech Stack** - HTML5, CSS3, Vanilla JavaScript
+- **Deployment** - nginx
+- **Domains** - xstiku.com, www.xstiku.com
 - **SSL** - Let's Encrypt (Certbot)
 
-### 本地开发
+### Local Development
 
 ```bash
-# 安装依赖
+# Install dependencies
 npm install
 
-# 构建项目
+# Build the project
 npm run build
 
-# 监听文件变化自动重建
+# Watch files and rebuild automatically
 npm run watch
 ```
 
-### 构建输出
-项目构建后输出到 `dist/` 目录，包含：
-- index.html - 网页内容
-- styles.css - 样式表
-- main.js - 脚本
-- logo.jpg - 品牌 logo
-- shuwen.jpg - 创始人头像
-
----
-
-## 📞 联系方式
-
-For inquiries or partnerships, please reach out through:
-- GitHub Issues
-- Official Website
-
----
-
-**Last Updated**: 2026-07-28  
-**Status**: 🚀 In Development
-
----
-
-*"NeurX is AI Operating System"*  
-*"S language is the native language of Artificial Intelligence."*
+### Build Output
+After building, the project outputs to the `dist/` directory, including:
+- `index.html` - Web page content
+- `styles.css` - Stylesheet
